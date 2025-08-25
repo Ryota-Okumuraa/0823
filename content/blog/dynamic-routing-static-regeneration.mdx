@@ -1,0 +1,29 @@
+---
+title: "動的ルーティングと静的再生成"
+description: "Next.jsの動的ルーティングとISRについて詳しく解説します。"
+date: 2023-08-02
+image: "/images/blog/blog-post-2.jpg"
+authors: ["shadcn"]
+---
+
+# 動的ルーティングと静的再生成
+
+Next.jsの動的ルーティング機能とIncremental Static Regeneration (ISR)について解説します。
+
+## 動的ルーティング
+
+`[slug].tsx`のような形式でファイル名を作成することで、動的なルーティングが可能になります。
+
+```typescript
+export default function PostPage({ params }: { params: { slug: string } }) {
+  return <div>{params.slug}</div>
+}
+```
+
+## ISRの利点
+
+- 高いパフォーマンス
+- SEOに最適
+- リアルタイム更新が可能
+
+ISRを使用することで、静的サイトの利点とサーバーサイドレンダリングの柔軟性を両立できます。

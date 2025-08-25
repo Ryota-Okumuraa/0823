@@ -1,0 +1,61 @@
+---
+title: "サーバーコンポーネントとクライアントコンポーネント"
+description: "React Server ComponentsとClient Componentsの違いと使い分けについて解説します。"
+date: 2023-08-04
+image: "/images/blog/blog-post-4.jpg"
+authors: ["shadcn"]
+---
+
+# サーバーコンポーネントとクライアントコンポーネント
+
+React 18で導入されたServer ComponentsとClient Componentsの違いと適切な使い分けについて解説します。
+
+## Server Components
+
+Server Componentsはサーバー側でレンダリングされるコンポーネントです。
+
+### 特徴
+- サーバー側でのみ実行される
+- ブラウザにJavaScriptが送信されない
+- データベースへの直接アクセスが可能
+- 大きな依存関係を安全に使用可能
+
+```typescript
+// Server Component（デフォルト）
+export default async function ServerComponent() {
+  const data = await fetch('https://api.example.com/data')
+  return <div>{data.title}</div>
+}
+```
+
+## Client Components
+
+Client Componentsはブラウザ側でレンダリングされるコンポーネントです。
+
+### 特徴
+- ブラウザで実行される
+- インタラクティブ機能が使用可能
+- React Hooksが使用可能
+- イベントハンドラーが使用可能
+
+```typescript
+'use client'
+
+import { useState } from 'react'
+
+export default function ClientComponent() {
+  const [count, setCount] = useState(0)
+  return (
+    <button onClick={() => setCount(count + 1)}>
+      カウント: {count}
+    </button>
+  )
+}
+```
+
+## 使い分けの指針
+
+- **Server Components**: データ取得、静的コンテンツ、SEOが重要な部分
+- **Client Components**: ユーザーインタラクション、状態管理が必要な部分
+
+適切に使い分けることで、パフォーマンスとユーザー体験の両方を向上させることができます。
