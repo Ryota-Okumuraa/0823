@@ -18,9 +18,10 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "my name",
-      url: siteConfig.url, 
+      url: siteConfig.url,
     }
   ],
+  metadataBase: new URL(siteConfig.url),
   openGraph: {
     type: "website",
     locale: "ja_JP",
@@ -28,7 +29,14 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name
-  }
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [`${siteConfig.url}/og.png`],
+    creator: "my name",
+  },
 };
 
 export default function RootLayout({
