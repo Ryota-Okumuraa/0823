@@ -2,7 +2,13 @@ import { allPosts } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 
 async function getPostFromSlug(slug: string) {
+    console.log("🔍 Debug Info:");
+    console.log("検索対象のslug:", slug);
+    console.log("allPostsの数:", allPosts.length);
+    console.log("allPostsの全slug:", allPosts.map(p => p.slug));
+    
     const post = allPosts.find((post) => post.slug === slug);
+    console.log("見つかったpost:", post);
     return post;
 }
 
@@ -11,7 +17,14 @@ export default async function PostPage({ params }: {
         slug: string
     }
 }) {
-    const slug = params.slug;
+    // Next.js 13+ App Router ではparamsがPromiseの場合があります
+    const resolvedParams = await params;
+    const slug = resolvedParams.slug;
+    console.log("📄 Page Level Debug:");
+    console.log("URL params:", resolvedParams);
+    console.log("slug value:", slug);
+    console.log("slug type:", typeof slug);
+    
     const post = await getPostFromSlug(slug);
 
     if (!post) {
