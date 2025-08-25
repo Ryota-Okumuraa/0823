@@ -1,0 +1,34 @@
+---
+title: "Reactフックの使い方"
+date: "2023-08-25"
+description: "Reactフックの基本的な使い方を解説します。"
+authors: ["React Developer"]
+---
+
+# Reactフックの使い方
+
+Reactフックを使ったコンポーネントの作成方法について説明します。
+
+## useState
+
+状態管理の基本となるuseStateフックの使い方：
+
+```javascript
+const [count, setCount] = useState(0);
+```
+
+## useEffect
+
+副作用を扱うためのuseEffectフック：
+
+```javascript
+useEffect(() => {
+  document.title = `カウント: ${count}`;
+}, [count]);
+```
+
+## カスタムフック
+
+独自のフックを作成して、ロジックを再利用可能にしましょう。
+
+フックを使いこなして、より良いReactアプリケーションを作りましょう！
