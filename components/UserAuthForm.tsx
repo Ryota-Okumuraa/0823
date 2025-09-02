@@ -5,7 +5,7 @@ import { Input } from "./ui/input";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "./ui/button";
 
-import { Icons } from "./icon";
+import { Icons } from "./Icon";
 import { signIn } from "next-auth/react";
 
 export const UserAuthForm = () => {

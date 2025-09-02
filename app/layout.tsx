@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
+import { Toaster } from "@/components/ui/sonner"
 
 const fontNotoSansJp = Noto_Sans_JP({
   variable: "--font-geist-sans",
@@ -47,9 +48,11 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={`${fontNotoSansJp.variable} ${fontNotoSansJp.variable} antialiased`}
+        className={`${fontNotoSansJp.variable} antialiased`}
+        suppressHydrationWarning={true}
       >
         {children}
+        <Toaster />
       </body>
     </html>
   );
