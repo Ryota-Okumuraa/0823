@@ -1,8 +1,10 @@
 "use client"
 
-import { Post } from "../generated/prisma"
+import { Post } from "@/generated/prisma";
+import { db } from "@/lib/db";
+import { getCurrentUser } from "@/lib/session";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator } from "./ui/dropdown-menu"
-import { Icons } from "@/components/Icon"
+import { Icons } from "./Icon";
 import Link from "next/link"
 import { useState } from "react"
 import {
