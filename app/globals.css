@@ -78,31 +78,4 @@
   body {
     @apply bg-background text-foreground;
   }
-<<<<<<< HEAD
-}
-
-h1.ce-header {
-  @apply text-3xl font-bold;
-}
-
-h2.ce-header {
-  @apply text-2xl font-semibold;
-}
-
-h3.ce-header {
-  @apply text-xl font-semibold;
-}
-
-h4.ce-header {
-  @apply text-lg font-semibold;
-}
-
-h5.ce-header {
-  @apply text-base font-semibold;
-}
-
-h6.ce-header {
-  @apply text-base font-semibold;
-=======
->>>>>>> eb3468aa4f4b5558040343d8ade5db3a25099e9d
 }

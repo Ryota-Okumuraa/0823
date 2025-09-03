@@ -2,7 +2,7 @@
 
 import { SidebarNavItem } from "@/types";
 import Link from "next/link";
-import { Icon as Icons } from "./Icon";
+import { Icon as Icons } from "./icon";
 import { usePathname } from "next/navigation";
 
 
@@ -14,7 +14,7 @@ interface DashboardNavProps {
 export const DashboardNav = ({ items }: DashboardNavProps) => {
 
     const pathname = usePathname();
-    
+
     if (!items.length) {
         return null;
     }

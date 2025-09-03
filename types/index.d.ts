@@ -4,6 +4,14 @@ export type NavItem = {
     disabled?: boolean;
 }
 
+export type SidebarNavItem = {
+    title: string;
+    href: string;
+    disabled?: boolean;
+    external?: boolean;
+    icon?: string;
+}
+
 export type SiteConfig = {
     name: string;
     description: string;

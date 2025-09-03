@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { useState } from "react";
-import { Icon } from "./Icon"
+import { Icon } from "./icon"
 import { ButtonProps } from "./ui/button"
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";

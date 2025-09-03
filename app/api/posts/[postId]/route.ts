@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server"
+import { NextResponse, NextRequest } from "next/server"
 import { postPathSchema } from "@/lib/validations/post";
 import { z } from "zod";
 import { db } from "@/lib/db";
@@ -12,7 +12,7 @@ const routeContextSchema = z.object({
 })
 
 export async function PATCH(
-    req: NextResponse,
+    req: NextRequest,
     context: z.infer<typeof routeContextSchema>
 ) {
     try {
@@ -46,7 +46,7 @@ export async function PATCH(
 }
 
 export async function DELETE(
-    req: NextResponse,
+    req: NextRequest,
     context: z.infer<typeof routeContextSchema>
 ) {
     try {
