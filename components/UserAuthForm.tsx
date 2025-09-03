@@ -5,7 +5,7 @@ import { Input } from "./ui/input";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "./ui/button";
 
-import { Icons } from "./Icon";
+import { Icon } from "./Icon";
 import { signIn } from "next-auth/react";
 
 export const UserAuthForm = () => {
@@ -43,7 +43,7 @@ export const UserAuthForm = () => {
                     }
                     }
                 >
-                    {isGithubLoading ? (<Icons.spinner className="animate-spin mr-2 h-4 w-4" />) : (<Icons.github className="mr-2 h-4 w-4" />)}
+                    {isGithubLoading ? (<Icon.spinner className="animate-spin mr-2 h-4 w-4" />) : (<Icon.github className="mr-2 h-4 w-4" />)}
                     GitHub
                 </button>
                 <button
@@ -54,7 +54,7 @@ export const UserAuthForm = () => {
                     }
                     }
                 >
-                    {isGoogleLoading ? (<Icons.spinner className="animate-spin mr-2 h-4 w-4" />) : (<Icons.google className="mr-2 h-4 w-4" />)}
+                    {isGoogleLoading ? (<Icon.spinner className="animate-spin mr-2 h-4 w-4" />) : (<Icon.google className="mr-2 h-4 w-4" />)}
                     Google
                 </button>
             </div>

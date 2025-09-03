@@ -22,9 +22,15 @@ export const authOptions: NextAuthOptions = {
         signIn: "/login",
     },
     callbacks: {
+        async jwt({ token, user }) {
+            if (user) {
+                return { ...token, id: user.id }
+            }
+            return token;
+        },
         async session({ session, token }) {
             if (token) {
-                session.user.id = token.sub;
+                session.user.id = token.id;
                 session.user.name = token.name;
                 session.user.email = token.email;
                 session.user.image = token.picture;

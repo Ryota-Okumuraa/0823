@@ -41,7 +41,7 @@ export const PostCreateButton = ({ className, variant, ...props }: PostCreateBut
 
         const post = await res.json();
 
-        // router.push(`editer/${post.id}`);
+        router.push(`/editer/${post.id}`);
     }
 
     return (
