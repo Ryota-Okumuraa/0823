@@ -26,3 +26,8 @@ export type SiteConfig = {
 export type MarketingConfig = {
     mainNav: NavItem[];
 }
+
+export type DashboardConfig = {
+    mainNav: NavItem[];
+    sidebarNav: SidebarNavItem[];
+}

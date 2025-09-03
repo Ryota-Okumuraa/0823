@@ -2,7 +2,7 @@
 
 import { SidebarNavItem } from "@/types";
 import Link from "next/link";
-import { Icon as Icons } from "./icon";
+import { Icons } from "./Icon";
 import { usePathname } from "next/navigation";
 
 

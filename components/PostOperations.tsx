@@ -2,7 +2,7 @@
 
 import { Post } from "../generated/prisma"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator } from "./ui/dropdown-menu"
-import { Icon } from "./icon"
+import { Icons } from "./Icon"
 import Link from "next/link"
 import { useState } from "react"
 import {
@@ -49,7 +49,7 @@ export const PostOperations = ({ post }: PostOPerationsProps) => {
         <>
             <DropdownMenu>
                 <DropdownMenuTrigger className="focus:outline-none">
-                    <Icon.ellipsis className="h-4 w-4" />
+                    <Icons.ellipsis className="h-4 w-4" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                     <DropdownMenuItem>
@@ -83,7 +83,7 @@ export const PostOperations = ({ post }: PostOPerationsProps) => {
                             }
                         }}
                             className="bg-red-600 focus:ring-red-600 hover:bg-red-700">
-                            {isDeleteLoading ? <Icon.spinner className="mr-2 w-4 h-4 animate-spin" /> : <Icon.trash className="mr-2 w-4 h-4 " />}
+                            {isDeleteLoading ? <Icons.spinner className="mr-2 w-4 h-4 animate-spin" /> : <Icons.trash className="mr-2 w-4 h-4 " />}
                             削除
                         </AlertDialogAction>
                     </AlertDialogFooter>

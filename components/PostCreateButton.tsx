@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { useState } from "react";
-import { Icon } from "./icon"
+import { Icons } from "./Icon"
 import { ButtonProps } from "./ui/button"
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
@@ -52,9 +52,9 @@ export const PostCreateButton = ({ className, variant, ...props }: PostCreateBut
             disabled={isloading}
             {...props}
         >
-            {isloading ? (<Icon.spinner className="animate-spin mr-2 h-4 w-4" />
+            {isloading ? (<Icons.spinner className="animate-spin mr-2 h-4 w-4" />
             ) : (
-                <Icon.add className="mr-2 h-4 w-4" />
+                <Icons.add className="mr-2 h-4 w-4" />
             )}
             新しい投稿
         </button>

@@ -15,7 +15,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { postPathSchema, PostPathSchemaType } from "@/lib/validations/post"
 import { toast } from "sonner"
 import { useRouter } from "next/navigation"
-import { Icon } from "./icon"
+import { Icons } from "./Icon"
 
 interface EditerProps {
     post: Pick<Post, "id" | "title" | "content" | "published">
@@ -109,7 +109,7 @@ export const Editer = ({ post }: EditerProps) => {
                         <p className="text-sm text-muted-foreground">公開</p>
                     </div>
                     <button className={cn(buttonVariants())} type="submit">
-                        {isSaving && <Icon.spinner className="animate-spin w-4 h-4 mr-2 " />}
+                        {isSaving && <Icons.spinner className="animate-spin w-4 h-4 mr-2 " />}
                         <span>保存</span>
                     </button>
                 </div>
