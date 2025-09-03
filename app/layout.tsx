@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 import { Toaster } from "@/components/ui/sonner"
 
 const fontNotoSansJp = Noto_Sans_JP({
-  variable: "--font-geist-sans",
+  variable: "--font-noto-sans-jp",
   subsets: ["latin"],
 });
 
