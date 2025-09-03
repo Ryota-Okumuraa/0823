@@ -43,5 +43,9 @@ node_modules
 
 
 # contentlayer
+<<<<<<< HEAD
 .contentlayer
 /generated/prisma
+=======
+.contentlayer
+>>>>>>> eb3468aa4f4b5558040343d8ade5db3a25099e9d

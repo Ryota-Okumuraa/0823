@@ -78,6 +78,7 @@
   body {
     @apply bg-background text-foreground;
   }
+<<<<<<< HEAD
 }
 
 h1.ce-header {
@@ -102,4 +103,6 @@ h5.ce-header {
 
 h6.ce-header {
   @apply text-base font-semibold;
+=======
+>>>>>>> eb3468aa4f4b5558040343d8ade5db3a25099e9d
 }

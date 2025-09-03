@@ -30,5 +30,9 @@ export default withAuth(async function middleware(req) {
 })
 
 export const config = {
+<<<<<<< HEAD
     matcher: ["/dashboard/:path*", "/editer/:path*", "/login", "/register"]
+=======
+    matcher: ["/dashboard/:path", "/editor/:path", "/login", "/register"]
+>>>>>>> eb3468aa4f4b5558040343d8ade5db3a25099e9d
 }

@@ -5,7 +5,11 @@ import { Input } from "./ui/input";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "./ui/button";
 
+<<<<<<< HEAD
 import { Icon } from "./Icon";
+=======
+import { Icons } from "./icon";
+>>>>>>> eb3468aa4f4b5558040343d8ade5db3a25099e9d
 import { signIn } from "next-auth/react";
 
 export const UserAuthForm = () => {
@@ -43,7 +47,11 @@ export const UserAuthForm = () => {
                     }
                     }
                 >
+<<<<<<< HEAD
                     {isGithubLoading ? (<Icon.spinner className="animate-spin mr-2 h-4 w-4" />) : (<Icon.github className="mr-2 h-4 w-4" />)}
+=======
+                    {isGithubLoading ? (<Icons.spinner className="animate-spin mr-2 h-4 w-4" />) : (<Icons.github className="mr-2 h-4 w-4" />)}
+>>>>>>> eb3468aa4f4b5558040343d8ade5db3a25099e9d
                     GitHub
                 </button>
                 <button
@@ -54,7 +62,11 @@ export const UserAuthForm = () => {
                     }
                     }
                 >
+<<<<<<< HEAD
                     {isGoogleLoading ? (<Icon.spinner className="animate-spin mr-2 h-4 w-4" />) : (<Icon.google className="mr-2 h-4 w-4" />)}
+=======
+                    {isGoogleLoading ? (<Icons.spinner className="animate-spin mr-2 h-4 w-4" />) : (<Icons.google className="mr-2 h-4 w-4" />)}
+>>>>>>> eb3468aa4f4b5558040343d8ade5db3a25099e9d
                     Google
                 </button>
             </div>
