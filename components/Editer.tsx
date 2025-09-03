@@ -15,7 +15,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { postPathSchema, PostPathSchemaType } from "@/lib/validations/post"
 import { toast } from "sonner"
 import { useRouter } from "next/navigation"
-import { Icons } from "./Icon"
+import { Icons } from "@/components/Icon"
 
 interface EditerProps {
     post: Pick<Post, "id" | "title" | "content" | "published">

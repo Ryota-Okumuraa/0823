@@ -2,7 +2,7 @@
 
 import { Post } from "../generated/prisma"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator } from "./ui/dropdown-menu"
-import { Icons } from "./Icon"
+import { Icons } from "@/components/Icon"
 import Link from "next/link"
 import { useState } from "react"
 import {

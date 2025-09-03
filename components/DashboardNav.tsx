@@ -2,7 +2,7 @@
 
 import { SidebarNavItem } from "@/types";
 import Link from "next/link";
-import { Icons } from "./Icon";
+import { Icons } from "@/components/Icon";
 import { usePathname } from "next/navigation";
 
 
