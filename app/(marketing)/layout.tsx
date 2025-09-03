@@ -15,7 +15,7 @@ export default function MarketingLayout({
 }) {
     return (
         <div>
-            <header className="container z-40 bg-background">
+            <header className="container z-40 bg-background mx-auto">
                 <div className="h-20 py-6 flex justify-between items-center">
                     <MainNav items={marketingConfig.mainNav} />
                     <nav>
